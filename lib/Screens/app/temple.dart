@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/Screens/Login/components/background.dart';
 import 'package:flutter_auth/Screens/app/drawermenu.dart';
@@ -21,7 +22,7 @@ class _TemplePageState extends State<TemplePage> {
     jsonData = json.decode(utf8.decode(response.bodyBytes));
     
     for (var data in jsonData) {
-      TempleData news = TempleData(data['ชื่อ'], data['พระเกจิ'], data['รายละเอียด'], data['ละติจูด !== null'], data['ลองติจูด !== null']);
+      TempleData news = TempleData(data['ชื่อ'], data['พระเกจิ'], data['รายละเอียด'], data['ละติจูด'], data['ลองติจูด']);
       dataList.add(news);
     }
     
@@ -113,7 +114,7 @@ class TempleData {
   String name;
   String monk;
   String detail;
-  String latitude;
-  String longtitude;
+  double latitude;
+  double longtitude;
   TempleData(this.name, this.monk, this.detail, this.latitude, this.longtitude);
 }
