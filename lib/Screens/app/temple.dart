@@ -49,7 +49,7 @@ class _TemplePageState extends State<TemplePage> {
                           margin: EdgeInsets.all(15),
                           child: Align(
                             child: Text(
-                              '${dataList[index].name}',
+                              '${"ชื่อวัด" + dataList[index].name}',
                               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                             ),
                           ),
@@ -58,7 +58,7 @@ class _TemplePageState extends State<TemplePage> {
                           margin: EdgeInsets.all(15),
                           child: Align(
                             child: Text(
-                              '${dataList[index].monk}',
+                              '${"พระเกจื" + dataList[index].monk}',
                               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                             ),
                           ),
@@ -67,8 +67,8 @@ class _TemplePageState extends State<TemplePage> {
                           margin: EdgeInsets.symmetric(horizontal: 15, vertical: 2),
                           child: Align(
                             child: Text(
-                              '${dataList[index].detail}',
-                              style: TextStyle(color: Colors.grey[600]),
+                              '${"รายละเอียด" + dataList[index].detail}',
+                              style: TextStyle(color: Colors.grey[500]),
                             ),
                           ),
                           ),
