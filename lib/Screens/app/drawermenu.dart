@@ -30,13 +30,6 @@ class _DrawerMenuState extends State<DrawerMenu> {
           ),
           ListTile(
             leading: Icon(Icons.house_rounded),
-            title: Text('ข้อมูลส่วนตัว'),
-            onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => TemplePage()),);
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.house_rounded),
             title: Text('ออกจากระบบ'),
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()),);
